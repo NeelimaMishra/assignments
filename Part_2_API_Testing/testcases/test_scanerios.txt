@@ -1,0 +1,159 @@
+Test cases:
+***********
+
+/badges/{ids} :- 
+=============
+id is mendatory parameter.
+Negative cases:
+---------------
+1.) Enter negative value eg. -9 in 'page' query parameter.
+	Expected: verify response code as 400
+2.) Enter 0 in 'page' in query parameter.
+	Expected: verify response code as 400
+3.) Enter negative value eg. -9 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+4.) Enter 0 in 'pagesize' in query parameter.
+	Expected: "items": [] empty list
+5.) Enter random any name in 'inname' query paramater.
+	Expected: "items": [] empty list
+6.) Enter invaild string in 'min' query paramater.
+7.) Enter invaild string in 'max' query paramater.
+Positive cases:
+---------------
+8.) 'sort' by 'rank' in query paramater. Verify the output.
+9.) 'sort' by 'name' in query paramater.
+10.) 'sort' by 'type' in query paramater.
+11.) sort=rank set max=gold for just gold
+12.) sort=rank, max=silver&min=silver for just silver
+13.) sort=rank, min=bronze for just bronze
+14.) Enter page, pagesize, fromdate, todate, order, min, max, sort, inname query parameter.
+
+/badges? :-
+===========
+Negative cases:
+---------------
+15.) Enter negative value eg. -9 in 'page' query parameter.
+	Expected: verify response code as 400
+16.) Enter 0 in 'page' in query parameter.
+	Expected: verify response code as 400
+17.) Enter negative value eg. -9 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+18.) Enter 0 in 'pagesize' in query parameter.
+	Expected: "items": [] empty list
+19.) Enter random any name in 'inname' query paramater.
+	Expected: "items": [] empty list
+20.) Enter invaild string in 'min' query paramater.
+21.) Enter invaild string in 'max' query paramater.
+Positive cases:
+---------------
+22.) 'sort' by 'rank' in query paramater. Verify the output.
+23.) 'sort' by 'name' in query paramater.
+24.) 'sort' by 'type' in query paramater.
+25.) sort=rank set max=gold for just gold
+26.) sort=rank, max=silver&min=silver for just silver
+27.) sort=rank, min=bronze for just bronze
+28.) Enter page, pagesize, fromdate, todate, order, min, max, sort, inname query parameter.
+29.) Verify order as 'asc'
+30.) Veirfy order as 'desc'
+
+/badges/name:-
+=============
+Negative cases:
+---------------
+31.) Enter negative value eg. -9 in 'page' query parameter.
+	Expected: verify response code as 400
+32.) Enter 0 in 'page' in query parameter.
+	Expected: verify response code as 400
+33.) Enter negative value eg. -9 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+34.) Enter 0 in 'pagesize' in query parameter.
+	Expected: "items": [] empty list
+35.) Enter random any name in 'inname' query paramater.
+	Expected: "items": [] empty list
+36.) Enter invaild string in 'min' query paramater.
+37.) Enter invaild string in 'max' query paramater.
+Positive cases:
+---------------
+38.) 'sort' by 'rank' in query paramater. Verify the output.
+39.) 'sort' by 'name' in query paramater.
+40.) 'sort' by 'type' in query paramater.
+41.) sort=rank set max=gold for just gold
+42.) sort=rank, max=silver&min=silver for just silver
+43.) sort=rank, min=bronze for just bronze
+44.) Enter page, pagesize, fromdate, todate, order, min, max, sort, inname query parameter.
+45.) Verify order as 'asc'
+46.) Veirfy order as 'desc'
+
+/badges/recipients:-
+===================
+Negative cases:
+---------------
+47.) Enter negative value eg. -9 in 'page' query parameter.
+	Expected: verify response code as 400
+48.) Enter 0 in 'page' in query parameter.
+	Expected: verify response code as 400
+49.) Enter negative value eg. -9 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+50.) Enter 0 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+51.) Enter fromdate before the todate.
+Positive cases:
+---------------
+52.) Enter page, pagesize, fromdate, todate query parameter.
+53.) Enter proper date in fromdate and todate query parameter.
+
+/badges/{ids}/recipients:-
+==========================
+Negative cases:
+---------------
+id is mendatory parameter.
+54.) Enter negative value eg. -9 in 'page' query parameter.
+	Expected: verify response code as 400
+55.) Enter 0 in 'page' in query parameter.
+	Expected: verify response code as 400
+56.) Enter negative value eg. -9 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+57.) Enter 0 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+58.) Enter fromdate before the todate.
+59.) Enter invalid ids name
+60.) Enter alphanumeric/special character in ids query parameter
+Positive cases:
+---------------
+61.) Enter page, pagesize, fromdate, todate query parameter.
+62.) Enter proper date in fromdate and todate query parameter.
+63.) Enter vaild ids query parameter
+
+/badges/tags:-
+==============
+Negative cases:
+---------------
+64.) Enter negative value eg. -9 in 'page' query parameter.
+	Expected: verify response code as 400
+65.) Enter 0 in 'page' in query parameter.
+	Expected: verify response code as 400
+66.) Enter negative value eg. -9 in 'pagesize' query parameter.
+	Expected: "items": [] empty list
+67.) Enter 0 in 'pagesize' in query parameter.
+	Expected: "items": [] empty list
+68.) Enter random any name in 'inname' query paramater.
+	Expected: "items": [] empty list
+69.) Enter invaild string in 'min' query paramater.
+70.) Enter invaild string in 'max' query paramater.
+71.) Enter random/invaid name for inname query paramater
+Positive cases:
+---------------
+72.) 'sort' by 'rank' in query paramater. Verify the output.
+72.) 'sort' by 'name' in query paramater.
+73.) 'sort' by 'type' in query paramater.
+74.) sort=rank set max=gold for just gold
+75.) sort=rank, max=silver&min=silver for just silver
+76.) sort=rank, min=bronze for just bronze
+77.) Enter page, pagesize, fromdate, todate, order, min, max, sort, inname query parameter.
+78.) Verify order as 'asc'
+79.) Veirfy order as 'desc'
+
+
+
+
+
